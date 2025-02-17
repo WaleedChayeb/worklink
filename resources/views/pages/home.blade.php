@@ -29,15 +29,15 @@
                     <div class="col-12 col-md-7 py-4">
                         <div class="d-flex justify-content-center align-items-center">
                             <div>
-                                <h1 class="font-weight-bolder text-center d-none d-md-flex">{{__('homepage_header',['siteName'=>getSetting('site.name')])}}</h1>
-                                <h1 class="font-weight-bolder text-center d-flex d-md-none">{{getSetting('site.slogan')}}</h1>
+                                <h1 class="font-weight-bolder text-center d-none d-md-flex">{{__('Header Title')}}</h1>
+                                <h1 class="font-weight-bolder text-center d-flex d-md-none">{{__('Header Sub Title')}}</h1>
                             </div>
                         </div>
                         <p class="text-center my-3">{{__('homepage_subheader')}}</p>
                         <div class="d-flex justify-content-center align-items-center">
-                            <a class="btn btn-outline-primary btn-grow mr-2 mb-0" href="{{route('search.get')}}">{{__('Search a job')}}</a>
-                            <a class="btn btn-primary btn-grow mb-0" href="{{route('jobs.create')}}">{{__('Post a job for')}} {{SettingsHelper::getWebsiteFormattedAmount(GenericHelper::getMinimumPackPrice())}}</a>
-                        </div>
+                            <a class="btn btn-primary btn-grow mb-0" href="{{route('search.get')}}">{{__('Search a job')}}</a>
+                            <a class="btn btn-outline-primary btn-grow mr-2 mb-0" href="{{ route('pages.get', ['slug' => 'about']) }}">{{ __('Learn more about us') }}</a>
+                          </div>
                     </div>
                 </div>
             </div>
