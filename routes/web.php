@@ -217,10 +217,4 @@ Route::fallback(function () {
     abort(404);
 });
 
-
-Route::get('/debug-locales', function () {
-    return response()->json([
-        'available_locales' => config('app.locales'),
-        'current_locale' => app()->getLocale(),
-    ]);
-});
+ 
