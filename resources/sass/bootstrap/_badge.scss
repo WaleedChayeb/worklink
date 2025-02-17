@@ -1,0 +1,30 @@
+// Quick fix for badges in buttons
+.btn .badge {
+    position: relative;
+    top: -1px;
+}
+
+@each $prop, $value in $theme-colors {
+    .badge.bg-#{$prop} {
+        background: $value;
+    }
+}
+.badge {
+    color:#FFF;
+    font-weight: 600;
+    padding:0.5rem
+    //text-transform: uppercase;
+}
+
+@each $prop, $value in $theme-colors {
+    .badge-#{$prop}-outline {
+        color: $value!important;
+        border: 1px solid $value!important;
+        background: transparent!important;
+    }
+}
+
+.badge-sm {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
