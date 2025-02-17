@@ -13,8 +13,9 @@
     {{-- Favicon --}}
     <link rel="shortcut icon" href="{{  asset(config('app.site.favicon')) }}" type="image/x-icon">
     {{-- (Preloading) Fonts --}}
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300" rel="preload" as="style">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,500,600,700" rel="preload" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     {{-- Global CSS Assets --}}
     {!!
         Minify::stylesheet(
