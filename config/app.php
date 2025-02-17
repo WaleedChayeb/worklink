@@ -23,7 +23,7 @@ return [
         'favicon' => '/img/logo-square-colored-radius.png',
         'currency_code' => 'USD',
         'currency_symbol' => '$',
-        'default_site_language' => 'en',
+        'default_site_language' => 'ar',
         'allow_pwa_installs' => false,
         'defaultJobPrice' => 200,
         'jobs' => [
