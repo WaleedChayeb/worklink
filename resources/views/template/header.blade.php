@@ -28,25 +28,14 @@
                 @endif
 
                 <!-- Authentication Links -->
-                @guest
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                    </li>
-                    @if (Route::has('register'))
-                        <a class="btn btn-primary btn-grow m-0 ml-3" href="{{route('jobs.create')}}">{{__('Post a job')}}</a>
-                    @endif
+                @guest 
+                    <a class="btn btn-primary btn-grow m-0 ml-3"  href="{{ route('login') }}">{{ __('Login') }}</a>  
                 @else
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle text-right text-truncate d-flex align-items-center pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             <div class="text-truncate max-width-150">{{ Auth::user()->name }}</div> <img src="{{Auth::user()->avatar}}" class="rounded-circle home-user-avatar ml-3">
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{route('my.companies.get')}}">
-                                {{__('My companies')}}
-                            </a>
-                            <a class="dropdown-item" href="{{route('my.jobs.get')}}">
-                                {{__('My jobs')}}
-                            </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> 
                             <a class="dropdown-item" href="{{route('search.get')}}">
                                 {{__('Search')}}
                             </a>
