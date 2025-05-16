@@ -24,6 +24,7 @@ Route::middleware(['auth:sanctum', 'throttle:60,1'])->group(function () {
 });
 
 Route::middleware('auth:sanctum')->post('/skills', [App\Http\Controllers\JobsController::class, 'addSkill']);
+Route::middleware('auth:sanctum')->post('/companies', [App\Http\Controllers\JobsController::class, 'addCompany']);
 
 Route::middleware('throttle:10,1')->post('/login', function (Request $request) {
     $user = User::where('email', $request->email)->first();

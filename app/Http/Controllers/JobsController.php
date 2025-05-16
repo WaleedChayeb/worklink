@@ -470,6 +470,27 @@ class JobsController extends Controller
         $companies = \App\Model\Company::all();
         return response()->json($companies);
     }
+    public function addCompany(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255|unique:companies,name',
+            'hq' => 'nullable|string|max:255',
+            'website_url' => 'nullable|url|max:255',
+            'email' => 'nullable|email|max:255',
+            'description' => 'nullable|string',
+        ]);
+
+        $company = new \App\Model\Company();
+        $company->user_id = auth()->id();
+        $company->name = $request->input('name');
+        $company->hq = $request->input('hq');
+        $company->website_url = $request->input('website_url');
+        $company->email = $request->input('email');
+        $company->description = $request->input('description');
+        $company->save();
+
+        return response()->json(['success' => true, 'company' => $company], 201);
+    }
 
     public function getAllJobTypes()
     {
