@@ -543,4 +543,45 @@ class JobsController extends Controller
 
         return response()->json(['success' => true, 'category' => $category], 201);
     }
+
+    public function addJob(Request $request)
+    {
+        // Validate request using JobCreateRequest rules
+        $rules = \App\Http\Requests\JobCreateRequest::getRules();
+        $request->validate($rules);
+
+        // Optionally, validate company (if not provided, create new)
+        $companyId = $request->input('company_id');
+        if (!$companyId) {
+            $company = \App\Model\Company::create([
+                'user_id' => auth()->id(),
+                'name' => $request->input('company_name'),
+                'slug' => \Str::slug($request->input('company_name')) . rand(1111, 999999),
+                'hq' => $request->input('company_hq'),
+                'website_url' => $request->input('company_website_url'),
+                'email' => $request->input('company_email'),
+                'description' => $request->input('company_description'),
+            ]);
+            $companyId = $company->id;
+        }
+
+        // Create the job post
+        $slug = \Str::slug($request->input('title')) . '-' . rand(1111, 999999);
+        $job = \App\Model\JobListing::create([
+            'user_id' => auth()->id(),
+            'title' => $request->input('title'),
+            'slug' => $slug,
+            'status' => \App\Model\JobListing::APPROVED_STATUS,
+            'company_id' => $companyId,
+            'category_id' => $request->input('category_id'),
+            'application_link' => $request->input('application_link'),
+            'description' => $request->input('description'),
+            'salary' => $request->input('salary'),
+            'location' => $request->input('location'),
+            'type_id' => $request->input('type_id'),
+        ]);
+
+
+        return response()->json(['success' => true, 'job' => $job], 201);
+    }
 }
