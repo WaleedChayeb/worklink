@@ -503,9 +503,9 @@ class JobsController extends Controller
                 'type' => 'image',
             ]);
         }
-
-        $company->save();
-
+        else {
+              $company->save();
+        } 
         return response()->json(['success' => true, 'company' => $company], 201);
     }
 
