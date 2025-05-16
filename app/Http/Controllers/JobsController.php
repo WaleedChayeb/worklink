@@ -548,8 +548,19 @@ class JobsController extends Controller
     {
         // Validate request using JobCreateRequest rules
         $rules = \App\Http\Requests\JobCreateRequest::getRules();
-        $request->validate($rules); 
-      
+        $request->validate($rules);
+
+        // Optionally, you can check if company_id exists (if you want strict validation)
+        if (!\App\Model\Company::find($request->input('company_id'))) {
+            return response()->json(['success' => false, 'message' => 'Invalid company_id'], 422);
+        }
+        if (!\App\Model\JobCategory::find($request->input('category_id'))) {
+            return response()->json(['success' => false, 'message' => 'Invalid category_id'], 422);
+        }
+        if (!\App\Model\JobType::find($request->input('type_id'))) {
+            return response()->json(['success' => false, 'message' => 'Invalid type_id'], 422);
+        }
+
         // Create the job post
         $slug = \Str::slug($request->input('title')) . '-' . rand(1111, 999999);
         $job = \App\Model\JobListing::create([
@@ -566,6 +577,18 @@ class JobsController extends Controller
             'type_id' => $request->input('type_id'),
         ]);
 
+        // Optionally, handle skills if you want to attach existing ones (not create new)
+        if ($request->has('skills')) {
+            $skills = is_array($request->input('skills')) ? $request->input('skills') : json_decode($request->input('skills'), true);
+            foreach ($skills as $skillId) {
+                if (\App\Model\Skill::find($skillId)) {
+                    \App\Model\JobSkill::create([
+                        'job_id' => $job->id,
+                        'skill_id' => $skillId,
+                    ]);
+                }
+            }
+        }
 
         return response()->json(['success' => true, 'job' => $job], 201);
     }
