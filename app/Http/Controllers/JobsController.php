@@ -579,13 +579,27 @@ class JobsController extends Controller
 
         // Optionally, handle skills if you want to attach existing ones (not create new)
         if ($request->has('skills')) {
-            $skills = is_array($request->input('skills')) ? $request->input('skills') : json_decode($request->input('skills'), true);
-            foreach ($skills as $skillId) {
-                if (\App\Model\Skill::find($skillId)) {
-                    \App\Model\JobSkill::create([
-                        'job_id' => $job->id,
-                        'skill_id' => $skillId,
-                    ]);
+            $skills = $request->input('skills');
+            // If it's a string, try to decode JSON
+            if (is_string($skills)) {
+                $decoded = json_decode($skills, true);
+                if (json_last_error() === JSON_ERROR_NONE) {
+                    $skills = $decoded;
+                }
+            }
+            // If it's a single int, wrap in array
+            if (is_int($skills)) {
+                $skills = [$skills];
+            }
+            // Only proceed if it's now an array
+            if (is_array($skills)) {
+                foreach ($skills as $skillId) {
+                    if (\App\Model\Skill::find($skillId)) {
+                        \App\Model\JobSkill::create([
+                            'job_id' => $job->id,
+                            'skill_id' => $skillId,
+                        ]);
+                    }
                 }
             }
         }
