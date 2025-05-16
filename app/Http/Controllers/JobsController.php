@@ -566,10 +566,10 @@ class JobsController extends Controller
             'plan_id' => 3,
             'status' => \App\Model\Subscription::ACTIVE_STATUS,
             'expires_at' => \Carbon\Carbon::now()->addMonths(3),
-            'amount' => 0, 
-            'provider' => 'Stripe',  
-             'type' => 'Six months sub',  
-        ]); 
+            'amount' => 0,  
+        ]);
+        $subscription->provider = 'stripe';  
+        $subscription->type = 'three-months-subscription';  
         $subscription->save();
 
         // Handle skills
