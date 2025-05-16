@@ -491,12 +491,14 @@ class JobsController extends Controller
         $company->slug = \Str::slug($company->name) . '-' . rand(1000, 9999); 
 
        if ($request->hasFile('logo')) {
-            $path = $request->file('logo')->store('company_logos', 'public'); 
+            $file = $request->file('logo');
+            $path = $file->store('company_logos', 'public');
             $company->save();
-             \App\Model\Attachment::create([
+            \App\Model\Attachment::create([
                 'id' => (string) Str::uuid(),
                 'company_id' => $company->id,
-                'path' => $path, 
+                'path' => $path,
+                'filename' => $file->getClientOriginalName(), // <-- Add this line
             ]);
         }
 
