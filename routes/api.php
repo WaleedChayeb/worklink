@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,9 +13,18 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+ 
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:sanctum')->get('/skills', [App\Http\Controllers\JobsController::class, 'getAllSkills']);
+
+Route::post('/login', function (Request $request) {
+    $user = User::where('email', $request->email)->first();
+
+    if (! $user || ! Hash::check($request->password, $user->password)) {
+        return response()->json(['message' => 'Invalid credentials'], 401);
+    }
+
+    $token = $user->createToken('api-token')->plainTextToken;
+
+    return response()->json(['token' => $token]);
 });
-
-Route::middleware('auth:api')->get('/skills', [App\Http\Controllers\JobsController::class, 'getAllSkills']);
