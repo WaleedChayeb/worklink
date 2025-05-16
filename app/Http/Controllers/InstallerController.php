@@ -6,7 +6,7 @@ use App\Http\Requests\InstallerSaveAdminInfoRequest;
 use App\Http\Requests\InstallerSaveDBInfoRequest;
 use App\Providers\AuthServiceProvider;
 use App\Providers\InstallerServiceProvider;
-use App\Model\User;
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;

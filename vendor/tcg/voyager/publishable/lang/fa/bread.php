@@ -31,7 +31,7 @@ return [
     'icon_hint2'             => 'کلاس فونت voyager',
     'model_class'            => 'نام کلاس مدل',
     'model_name'             => 'نام مدل',
-    'model_name_ph'          => 'مثال App\Model\User. در صورت خالی بودن از نام جدول استفاده خواهد شد',
+    'model_name_ph'          => 'مثال App\User. در صورت خالی بودن از نام جدول استفاده خواهد شد',
     'order'                  => 'چینش',
     'order_column'           => 'ستون مرتب سازی',
     'order_column_ph'        => 'ستونی که مرتب سازی در آن دخیره می‌شود',

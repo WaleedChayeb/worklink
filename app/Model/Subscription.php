@@ -55,7 +55,7 @@ class Subscription extends Model
 
     public function subscriber()
     {
-        return $this->belongsTo('App\Model\User', 'user_id');
+        return $this->belongsTo('App\User', 'user_id');
     }
 
     public function transactions()
@@ -65,7 +65,7 @@ class Subscription extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\Model\User', 'user_id');
+        return $this->belongsTo('App\User', 'user_id');
     }
 
     public function plan()

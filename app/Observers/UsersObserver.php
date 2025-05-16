@@ -5,7 +5,7 @@ namespace App\Observers;
 use App\Helpers\PaymentHelper;
 use App\Model\Attachment;
 use App\Providers\AttachmentServiceProvider;
-use App\Model\User;
+use App\User;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 

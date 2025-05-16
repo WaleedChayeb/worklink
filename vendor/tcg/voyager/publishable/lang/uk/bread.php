@@ -33,7 +33,7 @@ return [
     'icon_hint2'             => 'Voyager Fonts Class',
     'model_class'            => 'Назва класу моделі',
     'model_name'             => 'Назва моделі',
-    'model_name_ph'          => 'наприклад, \App\Model\User; if left empty will try and use the table name',
+    'model_name_ph'          => 'наприклад, \App\User; if left empty will try and use the table name',
     'order'                  => 'Сортування',
     'order_column'           => 'Стовпець сортування',
     'order_column_ph'        => 'Стовпчик де зберігається порядок сортування',

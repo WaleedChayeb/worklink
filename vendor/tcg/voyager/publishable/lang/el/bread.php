@@ -33,7 +33,7 @@ return [
     'icon_hint2'             => 'Voyager Font Class',
     'model_class'            => 'Model Class Name',
     'model_name'             => 'Model Name',
-    'model_name_ph'          => 'Π.χ. \App\Model\User, αν μείνει κενό θα γίνει προσπάθεια χρήσης του ονόματος του πίνακα',
+    'model_name_ph'          => 'Π.χ. \App\User, αν μείνει κενό θα γίνει προσπάθεια χρήσης του ονόματος του πίνακα',
     'order'                  => 'Ταξινόμηση',
     'order_column'           => 'Στήλη ταξινόμησης',
     'order_column_ph'        => 'Η στήλη όπου αποθηκεύεται η ταξινόμηση',

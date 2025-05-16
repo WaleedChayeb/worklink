@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use App\Model\UserCode;
 use App\Model\UserDevice;
-use App\Model\User;
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\App;

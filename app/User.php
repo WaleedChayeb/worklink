@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App;
 
 use App\Providers\GenericHelperServiceProvider;
 use Carbon\Carbon;

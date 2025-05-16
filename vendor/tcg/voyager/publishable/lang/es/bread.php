@@ -30,7 +30,7 @@ return [
     'icon_hint2'             => 'clase de Voyager Fonts',
     'model_class'            => 'Nombre de la clase del modelo',
     'model_name'             => 'Nombre del modelo',
-    'model_name_ph'          => 'P. ej. \App\Model\User (Si se deja vacío, intentará usar el nombre de la tabla)',
+    'model_name_ph'          => 'P. ej. \App\User (Si se deja vacío, intentará usar el nombre de la tabla)',
     'order'                  => 'Orden',
     'order_column'           => 'Columna de ordenación',
     'order_column_ph'        => 'La columna que contiene el valor de ordenación',

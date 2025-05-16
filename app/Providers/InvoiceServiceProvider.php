@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use App\Model\Invoice;
-use App\Model\User;
+use App\User;
 use Illuminate\Support\ServiceProvider;
 
 class InvoiceServiceProvider extends ServiceProvider

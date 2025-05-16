@@ -33,7 +33,7 @@ return [
     'icon_hint2'             => 'Voyager Font Class',
     'model_class'            => 'Nome della Classe del Model',
     'model_name'             => 'Nome Model',
-    'model_name_ph'          => 'es. \App\Model\User, se lasciato vuoto proverà ad utilizzare il nome della tabella',
+    'model_name_ph'          => 'es. \App\User, se lasciato vuoto proverà ad utilizzare il nome della tabella',
     'order'                  => 'Ordine',
     'order_column'           => 'Colonna per Ordinamento',
     'order_column_ph'        => 'La colonna dove l\'ordinamento è salvato',

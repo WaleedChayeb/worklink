@@ -50,7 +50,7 @@ class UserReport extends Model
 
     public function reporterUser()
     {
-        return $this->belongsTo('App\Model\User', 'from_user_id');
+        return $this->belongsTo('App\User', 'from_user_id');
     }
 
     public function reportedPost()

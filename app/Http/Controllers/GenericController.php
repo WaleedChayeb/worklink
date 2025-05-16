@@ -10,7 +10,7 @@ use App\Model\Tax;
 use App\Model\UserReport;
 use App\Providers\EmailsServiceProvider;
 use App\Providers\InstallerServiceProvider;
-use App\Model\User;
+use App\User;
 use Cookie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;

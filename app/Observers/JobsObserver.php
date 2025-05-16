@@ -8,7 +8,7 @@ use App\Providers\EmailsServiceProvider;
 use App\Providers\NotificationServiceProvider;
 use App\Providers\PaymentsServiceProvider;
 use App\Providers\SettingsServiceProvider;
-use App\Model\User;
+use App\User;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
 

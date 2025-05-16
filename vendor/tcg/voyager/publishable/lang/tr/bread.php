@@ -31,7 +31,7 @@ return [
     'icon_hint2'             => 'Voyager İkon Paketi',
     'model_class'            => 'Model Class İsmi',
     'model_name'             => 'Model İsmi',
-    'model_name_ph'          => 'ör. \App\Model\User, eğer boş bırakılırsa tablo ismi kullanılmasına çalışılacak',
+    'model_name_ph'          => 'ör. \App\User, eğer boş bırakılırsa tablo ismi kullanılmasına çalışılacak',
     'order'                  => 'Sırala',
     'order_column'           => 'Sıralama sütunu',
     'order_column_ph'        => 'Sıralama işleminin yapılacağı sütun',

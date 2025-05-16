@@ -5,7 +5,7 @@ namespace App\Providers;
 use App\Model\Notification;
 use App\Model\Transaction;
 use App\Notifications\SlackNotification;
-use App\Model\User;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;

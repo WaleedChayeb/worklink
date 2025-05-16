@@ -33,7 +33,7 @@ return [
     'icon_hint2'             => 'Voyager Şrift Sinfi',
     'model_class'            => 'Modelin Sinif adı',
     'model_name'             => 'Modelin adı',
-    'model_name_ph'          => 'məs. \App\Model\User, boş qaldıqda cədvəl adından istifadə etməyə çalışacaq',
+    'model_name_ph'          => 'məs. \App\User, boş qaldıqda cədvəl adından istifadə etməyə çalışacaq',
     'order'                  => 'Sıralanma',
     'order_column'           => 'Sütünu sırala',
     'order_column_ph'        => 'Sütunun sıralanmasının saxlanma yeri',

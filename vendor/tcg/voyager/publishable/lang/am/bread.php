@@ -33,7 +33,7 @@ return [
     'icon_hint2'             => 'Voyager ֆոնտի դասը',
     'model_class'            => 'Model-ի Դասի անունը',
     'model_name'             => 'Model- անունը',
-    'model_name_ph'          => 'օր. \App\Model\User, եթե թողնեք դատարկ, այն կփորձի օգտագործել աղյուսակի անունը',
+    'model_name_ph'          => 'օր. \App\User, եթե թողնեք դատարկ, այն կփորձի օգտագործել աղյուսակի անունը',
     'order'                  => 'Դասավորել',
     'order_column'           => 'Դասավորման սյունակ',
     'order_column_ph'        => 'Սյունակը, որտեղ կարգը պահվում է',

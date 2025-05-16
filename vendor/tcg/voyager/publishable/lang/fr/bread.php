@@ -33,7 +33,7 @@ return [
     'icon_hint2'             => 'police d\'icônes de Voyager',
     'model_class'            => 'Nom de la classe du modèle (model)',
     'model_name'             => 'Nom du modèle (model)',
-    'model_name_ph'          => 'exemple : \App\Model\User. Si laissé vide, essayera d\'utiliser le nom de la table',
+    'model_name_ph'          => 'exemple : \App\User. Si laissé vide, essayera d\'utiliser le nom de la table',
     'order'                  => 'Ordre',
     'order_column'           => 'Colonne d\'ordre',
     'order_column_ph'        => 'La colonne qui défini l\'ordre d\'affichage',

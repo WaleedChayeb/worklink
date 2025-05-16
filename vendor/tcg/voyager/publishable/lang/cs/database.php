@@ -50,7 +50,7 @@ return [
     'key'                       => 'Klíč',
     'model_class'               => 'Název třídy modelu',
     'model_name'                => 'Název modelu',
-    'model_name_ph'             => 'např. \App\Model\User, pokud zůstane prázdné, zkusí se vytvořit podle názvu tabulky',
+    'model_name_ph'             => 'např. \App\User, pokud zůstane prázdné, zkusí se vytvořit podle názvu tabulky',
     'name_warning'              => 'Prosím pojmenujte sloupec před přidáním indexu',
     'no_composites_warning'     => 'Tato tabulka má složené indexy. Prosím vemte v potaz, že nejsou momentálně podporovány. Buďte opatrní při manipulaci s nimi.',
     'null'                      => 'Null',

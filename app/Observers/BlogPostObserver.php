@@ -10,7 +10,7 @@ class BlogPostObserver
     /**
      * Listen to the User updating event.
      *
-     * @param  \App\Model\User  $user
+     * @param  \App\User  $user
      * @return void
      */
     public function creating(BlogPost $blogPost)
