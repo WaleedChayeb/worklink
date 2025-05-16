@@ -51,7 +51,27 @@
                     </li>
 
                     @if(Auth::check())
-                   
+                    <li class="nav-item ">
+                        <a href="{{route('my.jobs.get')}}" class="h-pill h-pill-primary nav-link {{ in_array(Route::currentRouteName(), ['my.jobs.get', 'my.jobs.edit']) ? 'active' : ''}} d-flex justify-content-between">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="icon-wrapper d-flex justify-content-center align-items-center">
+                                    @include('elements.icon',['icon'=>'briefcase-outline','variant'=>'small'])
+                                </div>
+                                <span class="d-block  text-truncate side-menu-label">{{__('My jobs')}}</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a href="{{route('my.companies.get')}}" class="h-pill h-pill-primary nav-link {{in_array(Route::currentRouteName(), ['my.companies.get', 'my.companies.edit', 'my.companies.create'])  ? 'active' : ''}} d-flex justify-content-between">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="icon-wrapper d-flex justify-content-center align-items-center">
+                                    @include('elements.icon',['icon'=>'business-outline','variant'=>'small'])
+                                </div>
+                                <span class="d-block  text-truncate side-menu-label">{{__('Companies')}}</span>
+                            </div>
+                        </a>
+                    </li>
 
                     <li class="nav-item">
                         <a href="{{route('my.settings')}}" class="nav-link {{Route::currentRouteName() == 'my.settings' ? 'active' : ''}} h-pill h-pill-primary d-flex justify-content-between">
