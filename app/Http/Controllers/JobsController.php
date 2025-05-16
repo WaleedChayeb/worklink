@@ -489,25 +489,7 @@ class JobsController extends Controller
         $company->email = $request->input('email');
         $company->description = $request->input('description');
         $company->slug = \Str::slug($company->name) . '-' . rand(1000, 9999);
-
-        $company_logo = null;
-        if ($request->hasFile('logo')) {
-            $file = $request->file('logo');
-            $path = $file->store('companies/images', 'public');
-            $company->save();
-
-            $attachment = \App\Model\Attachment::create([
-                'id' => (string) \Str::uuid(),
-                'company_id' => $company->id,
-                'path' => $path,
-                'filename' => $file->getClientOriginalName(),
-                'driver' => \App\Model\Attachment::PUBLIC_DRIVER,
-                'type' => 'image',
-            ]);
- 
-        } else {
-            $company->save();
-        }
+        $company->save();
 
         return response()->json([
             'success' => true,
