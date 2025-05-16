@@ -581,10 +581,10 @@ class JobsController extends Controller
         \App\Model\Subscription::create([
             'user_id' => auth()->id(),
             'job_id' => $job->id,
-            'plan_id' => 3, // Fixed plan_id
-            'status' => \App\Model\Subscription::ACTIVE_STATUS, // completed
-            'expires_at' => \Carbon\Carbon::now()->addMonths(3), // 3 months from now
-            'amount' => 0, // Assuming no payment for simplicity; adjust if needed
+            'plan_id' => 3,
+            'status' => \App\Model\Subscription::ACTIVE_STATUS,
+            'expires_at' => \Carbon\Carbon::now()->addMonths(3),
+            'amount' => 0,
         ]);
 
         // Handle skills
