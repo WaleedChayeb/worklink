@@ -490,11 +490,11 @@ class JobsController extends Controller
         $company->description = $request->input('description');
         $company->slug = \Str::slug($company->name) . '-' . rand(1000, 9999); 
 
-        if ($request->hasFile('logo')) {
+       if ($request->hasFile('logo')) {
             $path = $request->file('logo')->store('company_logos', 'public'); 
             $company->save();
-            // Create attachment
-            \App\Model\Attachment::create([
+             \App\Model\Attachment::create([
+                'id' => (string) Str::uuid(),
                 'company_id' => $company->id,
                 'path' => $path, 
             ]);
