@@ -36,17 +36,7 @@
         </div>
     </div>
 
-    <div class="loginHelpers form-group d-flex flex-row-reverse">
-        @if (Route::has('password.request'))
-            <div class="pull-right">
-                @if(isset($mode) && $mode == 'ajax')
-                    <a href="javascript:void(0);" onclick="LoginModal.changeActiveTab('forgot')" class="" id="forgotPass-label">{{ __('Forgot Your Password?') }}</a>
-                @else
-                    <a href="{{ route('password.request') }}" class="" id="forgotPass-label">{{ __('Forgot Your Password?') }}</a>
-                @endif
-            </div>
-        @endif
-    </div>
+ 
 
     <div class="clearfix"></div>
     <div class="form-group row mb-0 mt-4">
