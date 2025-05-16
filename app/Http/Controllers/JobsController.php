@@ -478,6 +478,7 @@ class JobsController extends Controller
             'website_url' => 'nullable|url|max:255',
             'email' => 'nullable|email|max:255',
             'description' => 'nullable|string',
+            'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $company = new \App\Model\Company();
@@ -487,7 +488,13 @@ class JobsController extends Controller
         $company->website_url = $request->input('website_url');
         $company->email = $request->input('email');
         $company->description = $request->input('description');
-        $company->slug = \Str::slug($company->name) . '-' . rand(1000, 9999); // <-- Add this line
+        $company->slug = \Str::slug($company->name) . '-' . rand(1000, 9999); 
+
+        if ($request->hasFile('logo')) {
+            $path = $request->file('logo')->store('company_logos', 'public');
+            $company->logo = $path; 
+        }
+
         $company->save();
 
         return response()->json(['success' => true, 'company' => $company], 201);
