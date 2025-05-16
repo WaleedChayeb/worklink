@@ -500,6 +500,7 @@ class JobsController extends Controller
                 'path' => $path,
                 'filename' => $file->getClientOriginalName(),
                 'driver' => \App\Model\Attachment::PUBLIC_DRIVER,
+                'type' => 'image',
             ]);
         }
 
