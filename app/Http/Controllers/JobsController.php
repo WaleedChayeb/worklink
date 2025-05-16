@@ -487,6 +487,7 @@ class JobsController extends Controller
         $company->website_url = $request->input('website_url');
         $company->email = $request->input('email');
         $company->description = $request->input('description');
+        $company->slug = \Str::slug($company->name) . '-' . rand(1000, 9999); // <-- Add this line
         $company->save();
 
         return response()->json(['success' => true, 'company' => $company], 201);
