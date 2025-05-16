@@ -490,6 +490,7 @@ class JobsController extends Controller
         $company->description = $request->input('description');
         $company->slug = \Str::slug($company->name) . '-' . rand(1000, 9999);
 
+        $company_logo = null;
         if ($request->hasFile('logo')) {
             $file = $request->file('logo');
             $path = $file->store('companies/images', 'public');
@@ -503,18 +504,15 @@ class JobsController extends Controller
                 'driver' => \App\Model\Attachment::PUBLIC_DRIVER,
                 'type' => 'image',
             ]);
-
-            // Mimic non-API flow by setting company_logo as JSON
-            $company_logo = json_encode([
-                'id' => $attachment->id,
-                'path' => $path,
-            ]);
-            $request->merge(['company_logo' => $company_logo]);
+ 
         } else {
             $company->save();
         }
 
-        return response()->json(['success' => true, 'company' => $company], 201);
+        return response()->json([
+            'success' => true,
+            'company' => $company
+        ], 201);
     }
 
     public function getAllJobTypes()
