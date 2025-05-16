@@ -16,3 +16,5 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/skills', [App\Http\Controllers\JobsController::class, 'getAllSkills']);

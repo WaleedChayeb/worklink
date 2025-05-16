@@ -446,4 +446,10 @@ class JobsController extends Controller
 //            return response()->json(['success' => false, 'message' => 'Applicant already registered'], 500);
         }
     }
+
+    public function getAllSkills()
+    {
+        $skills = Skill::all();
+        return response()->json($skills);
+    }
 }
