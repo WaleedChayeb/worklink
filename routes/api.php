@@ -22,6 +22,8 @@ Route::middleware(['auth:sanctum', 'throttle:60,1'])->group(function () {
     Route::get('/jobtypes', [App\Http\Controllers\JobsController::class, 'getAllJobTypes']);
     Route::get('/jobcategories', [App\Http\Controllers\JobsController::class, 'getAllJobCategories']);
 });
+
+
 Route::middleware('throttle:10,1')->post('/login', function (Request $request) {
     $user = User::where('email', $request->email)->first();
 
