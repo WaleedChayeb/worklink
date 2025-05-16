@@ -559,16 +559,17 @@ class JobsController extends Controller
             'type_id' => $request->input('type_id'),
         ]);
 
-        // Create subscription for the job
-        \App\Model\Subscription::create([
+        // Create subscription for the job 
+        $subscription = new \App\Model\Subscription([
             'user_id' => auth()->id(),
             'job_id' => $job->id,
             'plan_id' => 3,
             'status' => \App\Model\Subscription::ACTIVE_STATUS,
             'expires_at' => \Carbon\Carbon::now()->addMonths(3),
             'amount' => 0,
-            'type' => 'Six months sub',
         ]);
+        $subscription->type = 'Six months sub'; // assign directly
+        $subscription->save();
 
         // Handle skills
         if ($request->has('skills')) {
