@@ -452,4 +452,10 @@ class JobsController extends Controller
         $skills = Skill::all();
         return response()->json($skills);
     }
+
+    public function getAllCompanies()
+    {
+        $companies = \App\Model\Company::all();
+        return response()->json($companies);
+    }
 }

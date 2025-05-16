@@ -17,6 +17,7 @@ use App\User;
  
 
 Route::middleware('auth:sanctum')->get('/skills', [App\Http\Controllers\JobsController::class, 'getAllSkills']);
+Route::middleware('auth:sanctum')->get('/companies', [App\Http\Controllers\JobsController::class, 'getAllCompanies']);
 
 Route::post('/login', function (Request $request) {
     $user = User::where('email', $request->email)->first();
