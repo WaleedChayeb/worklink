@@ -598,3 +598,4 @@ class JobsController extends Controller
 
         return response()->json(['success' => true, 'job' => $job], 201);
     }
+}
