@@ -526,4 +526,21 @@ class JobsController extends Controller
         $categories = \App\Model\JobCategory::all();
         return response()->json($categories);
     }
+
+    public function addJobCategory(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255|unique:categories,name',
+            'slogan' => 'nullable|string|max:255',
+            'description' => 'nullable|string',
+        ]);
+
+        $category = \App\Model\JobCategory::create([
+            'name' => $request->input('name'),
+            'slogan' => $request->input('slogan'),
+            'description' => $request->input('description'),
+        ]);
+
+        return response()->json(['success' => true, 'category' => $category], 201);
+    }
 }
