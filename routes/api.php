@@ -16,12 +16,13 @@ use App\User;
 */
  
 
-Route::middleware('auth:sanctum')->get('/skills', [App\Http\Controllers\JobsController::class, 'getAllSkills']);
-Route::middleware('auth:sanctum')->get('/companies', [App\Http\Controllers\JobsController::class, 'getAllCompanies']);
-Route::middleware('auth:sanctum')->get('/jobtypes', [App\Http\Controllers\JobsController::class, 'getAllJobTypes']);
-Route::middleware('auth:sanctum')->get('/jobcategories', [App\Http\Controllers\JobsController::class, 'getAllJobCategories']);
-
-Route::post('/login', function (Request $request) {
+Route::middleware(['auth:sanctum', 'throttle:60,1'])->group(function () {
+    Route::get('/skills', [App\Http\Controllers\JobsController::class, 'getAllSkills']);
+    Route::get('/companies', [App\Http\Controllers\JobsController::class, 'getAllCompanies']);
+    Route::get('/jobtypes', [App\Http\Controllers\JobsController::class, 'getAllJobTypes']);
+    Route::get('/jobcategories', [App\Http\Controllers\JobsController::class, 'getAllJobCategories']);
+});
+Route::middleware('throttle:10,1')->post('/login', function (Request $request) {
     $user = User::where('email', $request->email)->first();
 
     if (! $user || ! Hash::check($request->password, $user->password)) {
