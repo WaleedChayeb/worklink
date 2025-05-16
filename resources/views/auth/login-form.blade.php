@@ -59,16 +59,4 @@
 
 </form>
 
-@if(!getSetting('social.facebook_client_id') && !getSetting('social.twitter_client_id') && !getSetting('social.google_client_id'))
-    <hr>
-    <div class=" text-center py-2">
-        <p class="mb-0">
-            {{__("Don't have an account?")}}
-            @if(isset($mode) && $mode == 'ajax')
-                <a href="javascript:void(0);" onclick="LoginModal.changeActiveTab('register')" class="text-primary text-gradient font-weight-bold">{{__('Sign up')}}</a>
-            @else
-                <a href="{{route('register')}}" class="text-primary text-gradient font-weight-bold">{{__('Sign up')}}</a>
-            @endif
-        </p>
-    </div>
-@endif
+

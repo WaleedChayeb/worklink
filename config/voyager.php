@@ -11,7 +11,8 @@ return [
     */
 
     'user' => [
-        'add_default_role_on_register' => true,
+        'add_default_role_on_register' => false,
+        'add_users'                    => false, // Disable adding users
         'default_role'                 => 'user',
         'default_cover'               => '/img/default-cover.png',
         'default_avatar'               => '/img/default-avatar.jpg',

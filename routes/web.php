@@ -39,8 +39,9 @@ Route::post('/contact/send', ['uses' => 'GenericController@sendContactMessage', 
 Route::get('language/{locale}', ['uses' => 'GenericController@setLanguage', 'as'   => 'language']);
 
 /* Auth Routes */
-/* Auth Routes + Verify password */
-Auth::routes(['verify'=>true]);
+/* Auth Routes + Verify password 
+Auth::routes(['verify'=>true]);*/
+Auth::routes(['verify' => true, 'register' => false]);
 Route::get('email/verify', ['uses' => 'GenericController@userVerifyEmail', 'as' => 'verification.notice']);
 Route::post('resendVerification', ['uses' => 'GenericController@resendConfirmationEmail', 'as'   => 'verfication.resend']);
 

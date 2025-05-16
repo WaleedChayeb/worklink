@@ -25,6 +25,10 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
+    public function showRegistrationForm()
+    {
+        abort(403, 'Registration is disabled.');
+    }
 
     /**
      * Where to redirect users after registration.
