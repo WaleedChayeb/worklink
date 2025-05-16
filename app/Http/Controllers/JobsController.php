@@ -492,7 +492,7 @@ class JobsController extends Controller
 
        if ($request->hasFile('logo')) {
             $file = $request->file('logo');
-            $path = $file->store('company_logos', 'public');
+            $path = $file->store('companies/images', 'public');
             $company->save();
             \App\Model\Attachment::create([
                 'id' => (string) Str::uuid(),
