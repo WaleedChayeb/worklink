@@ -550,7 +550,7 @@ class JobsController extends Controller
         $rules = \App\Http\Requests\JobCreateRequest::getRules();
         $request->validate($rules);
 
-        // Optionally, you can check if company_id exists (if you want strict validation)
+        // Validate company_id, category_id, and type_id
         if (!\App\Model\Company::find($request->input('company_id'))) {
             return response()->json(['success' => false, 'message' => 'Invalid company_id'], 422);
         }
@@ -577,7 +577,17 @@ class JobsController extends Controller
             'type_id' => $request->input('type_id'),
         ]);
 
-        // Optionally, handle skills if you want to attach existing ones (not create new)
+        // Create subscription for the job
+        \App\Model\Subscription::create([
+            'user_id' => auth()->id(),
+            'job_id' => $job->id,
+            'plan_id' => 3, // Fixed plan_id
+            'status' => \App\Model\Subscription::ACTIVE_STATUS, // completed
+            'expires_at' => \Carbon\Carbon::now()->addMonths(3), // 3 months from now
+            'amount' => 0, // Assuming no payment for simplicity; adjust if needed
+        ]);
+
+        // Handle skills
         if ($request->has('skills')) {
             $skills = $request->input('skills');
             // If it's a string, try to decode JSON
@@ -606,4 +616,3 @@ class JobsController extends Controller
 
         return response()->json(['success' => true, 'job' => $job], 201);
     }
-}
