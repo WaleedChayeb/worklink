@@ -567,6 +567,7 @@ class JobsController extends Controller
             'status' => \App\Model\Subscription::ACTIVE_STATUS,
             'expires_at' => \Carbon\Carbon::now()->addMonths(3),
             'amount' => 0,
+            'type' => 33,
         ]);
 
         // Handle skills
