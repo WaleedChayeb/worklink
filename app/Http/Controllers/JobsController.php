@@ -467,7 +467,7 @@ class JobsController extends Controller
 
     public function getAllJobCategories()
     {
-        $categories = \App\Model\Category::all();
+        $categories = \App\Model\JobCategory::all();
         return response()->json($categories);
     }
 }
