@@ -452,6 +452,18 @@ class JobsController extends Controller
         $skills = Skill::all();
         return response()->json($skills);
     }
+    public function addSkill(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255|unique:skills,name',
+        ]);
+
+        $skill = new \App\Model\Skill();
+        $skill->name = $request->input('name');
+        $skill->save();
+
+        return response()->json(['success' => true, 'skill' => $skill], 201);
+    }
 
     public function getAllCompanies()
     {
