@@ -32,7 +32,8 @@
         "zanysoft/laravel-zip": "^2.0",
         "stripe/stripe-php": "^7.77",
         "yabacon/paystack-php": "^2.2",
-        "paypal/rest-api-sdk-php": "^1.14"
+        "paypal/rest-api-sdk-php": "^1.14",
+        "laravel/sanctum": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",
