@@ -31,7 +31,7 @@ return [
     'icon_hint2'             => 'Voyager Font Class',
     'model_class'            => 'モデルクラス名',
     'model_name'             => 'モデル名',
-    'model_name_ph'          => '例: \App\User, 空にするとテーブル名が使われます',
+    'model_name_ph'          => '例: \App\Model\User, 空にするとテーブル名が使われます',
     'order'                  => '並び順',
     'order_column'           => '並び順カラム',
     'order_column_ph'        => '並び順自体を格納するカラム',

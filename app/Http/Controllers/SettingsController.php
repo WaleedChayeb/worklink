@@ -16,7 +16,7 @@ use App\Model\UserVerify;
 use App\Providers\AttachmentServiceProvider;
 use App\Providers\AuthServiceProvider;
 use App\Providers\EmailsServiceProvider;
-use App\User;
+use App\Model\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

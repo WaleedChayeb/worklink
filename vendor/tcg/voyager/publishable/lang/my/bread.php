@@ -33,7 +33,7 @@ return [
     'icon_hint2'             => 'Voyager Font Class',
     'model_class'            => 'မော်ဒယ်အတန်းအမည်',
     'model_name'             => 'မော်ဒယ်အမည်',
-    'model_name_ph'          => 'ဥပမာ- \App\User၊ ဇယားအမည်ကို အသုံးပြုမည်| ဘာမှမရှိဘူးဆိုလျှင် table name ကို အသုံးပြုမည်',
+    'model_name_ph'          => 'ဥပမာ- \App\Model\User၊ ဇယားအမည်ကို အသုံးပြုမည်| ဘာမှမရှိဘူးဆိုလျှင် table name ကို အသုံးပြုမည်',
     'order'                  => 'အော်ဒါ',
     'order_column'           => 'အော်ဒါ ကော်လံ',
     'order_column_ph'        => 'အမျိုးအစားအစီအစဥ်ကို ကိုယ်တိုင်သိမ်းဆည်းသောကော်လံ',

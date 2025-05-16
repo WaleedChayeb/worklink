@@ -50,7 +50,7 @@ return [
     'key'                       => 'Klucz',
     'model_class'               => 'Nazwa klasy modelu',
     'model_name'                => 'Nazwa modelu',
-    'model_name_ph'             => 'np. App\User, jeśli pusty - spróbuję użyć nazwę tabeli',
+    'model_name_ph'             => 'np. App\Model\User, jeśli pusty - spróbuję użyć nazwę tabeli',
     'name_warning'              => 'Nazwij kolumnę przed dodaniem indeksu',
     'no_composites_warning'     => 'Ta tabela ma złożone indeksy. W tej chwili nie są one obsługiwane. Zachowaj ostrożność podczas próby dodania albo usunięcia indeksów.',
     'null'                      => 'Null',

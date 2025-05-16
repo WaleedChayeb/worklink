@@ -32,7 +32,7 @@ return [
     'icon_hint2'                => 'Voyager Typssnittsklass',
     'model_class'               => 'Modell Klass Namn',
     'model_name'                => 'Modellens Namn',
-    'model_name_ph'             => 't ex. \App\User, om tom används tabellens namn',
+    'model_name_ph'             => 't ex. \App\Model\User, om tom används tabellens namn',
     'order'                     => 'Ordning',
     'order_column'              => 'Ordning efter kolumn',
     'order_column_ph'           => 'Kolumnen där ordningen sparas',

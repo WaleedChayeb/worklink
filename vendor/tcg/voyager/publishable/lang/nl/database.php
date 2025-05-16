@@ -49,7 +49,7 @@ return [
     'key'                       => 'Sleutel',
     'model_class'               => 'Model Class naam',
     'model_name'                => 'Model naam',
-    'model_name_ph'             => 'bijv. \App\User, indien leeg zal worden getracht de tabelnaam te gebruiken',
+    'model_name_ph'             => 'bijv. \App\Model\User, indien leeg zal worden getracht de tabelnaam te gebruiken',
     'name_warning'              => 'Voeg alstublieft een kolomnaam toe voordat u een index toevoegt',
     'no_composites_warning'     => 'Deze tabel heeft een samengestelde sleutel. Wees bewust dat dit niet wordt ondersteund '.
         'op dit moment. Wees voorzichtig bij het toevoegen/verwijderen van de index.',

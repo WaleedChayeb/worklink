@@ -31,7 +31,7 @@ return [
     'icon_hint2'             => 'Voyager Font Class',
     'model_class'            => 'Model Class Name',
     'model_name'             => 'Model Name',
-    'model_name_ph'          => 'ex. \App\User, if left empty will try and use the table name',
+    'model_name_ph'          => 'ex. \App\Model\User, if left empty will try and use the table name',
     'order'                  => 'Order',
     'order_column'           => 'Order column',
     'order_column_ph'        => 'The column where the order is stored',

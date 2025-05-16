@@ -33,7 +33,7 @@ return [
     'icon_hint2'             => 'Voyager Font CSS-Klasse',
     'model_class'            => 'Name der Model Klasse',
     'model_name'             => 'Model Name',
-    'model_name_ph'          => 'z. B. \App\User, falls leer gelassen wird versucht den Namen der Tabelle zu verwenden',
+    'model_name_ph'          => 'z. B. \App\Model\User, falls leer gelassen wird versucht den Namen der Tabelle zu verwenden',
     'order'                  => 'Sortieren',
     'order_column'           => 'Sortierungs-Spalte',
     'order_column_ph'        => 'Die Spalte wo die Sortierung gespeichert wird',

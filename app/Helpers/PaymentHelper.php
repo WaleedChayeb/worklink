@@ -16,7 +16,7 @@ use App\Providers\InvoiceServiceProvider;
 use App\Providers\NotificationServiceProvider;
 use App\Providers\PaymentsServiceProvider;
 use App\Providers\SettingsServiceProvider;
-use App\User;
+use App\Model\User;
 use Carbon\Carbon;
 use DateTime;
 use DateTimeZone;

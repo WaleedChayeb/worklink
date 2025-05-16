@@ -4,7 +4,7 @@ namespace App\Observers;
 
 use App\Model\UserVerify;
 use App\Providers\EmailsServiceProvider;
-use App\User;
+use App\Model\User;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;

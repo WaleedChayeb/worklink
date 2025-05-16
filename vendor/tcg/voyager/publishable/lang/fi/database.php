@@ -50,7 +50,7 @@ return [
     'key'                       => 'Avainkenttä',
     'model_class'               => 'Modellin luokkanimi',
     'model_name'                => 'Modellin nimi',
-    'model_name_ph'             => 'esim. \App\User, oletuksena kokeillaan käyttää taulun nimeä',
+    'model_name_ph'             => 'esim. \App\Model\User, oletuksena kokeillaan käyttää taulun nimeä',
     'name_warning'              => 'Ole hyvä ja nimeä sarake ennen indeksin lisäämistä',
     'no_composites_warning'     => 'Tällä taululla on komposiitti-indeksejä. Huomaathan että ne eivät ole tuettuja tällä hetkellä. Olethan varovainen muuttaessasi indeksejä.',
     'null'                      => 'Null-arvo',

@@ -11,7 +11,7 @@ use App\Model\Reaction;
 use App\Model\Subscription;
 use App\Model\Transaction;
 use App\Model\UserReport;
-use App\User;
+use App\Model\User;
 use Illuminate\Support\ServiceProvider;
 
 class DashboardServiceProvider extends ServiceProvider

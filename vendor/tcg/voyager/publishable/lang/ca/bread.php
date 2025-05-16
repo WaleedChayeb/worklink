@@ -31,7 +31,7 @@ return [
     'icon_hint2'             => 'Voyager Font Class',
     'model_class'            => 'Nom de classe del model',
     'model_name'             => 'Nom del model',
-    'model_name_ph'          => 'ex. \App\User, si es deixa buit s\intentarà fer servir el Nom de la taula ',
+    'model_name_ph'          => 'ex. \App\Model\User, si es deixa buit s\intentarà fer servir el Nom de la taula ',
     'policy_class'           => 'Classe de restriccions',
     'policy_name'            => 'Nom de restriccions',
     'policy_name_ph'         => 'ex. \App\Policies\UserPolicy, si es deixa buit, intentará fer servir el valor predeterminat',

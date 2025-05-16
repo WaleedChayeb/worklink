@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use App\Model\Tax;
 use App\Model\Transaction;
-use App\User;
+use App\Model\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 

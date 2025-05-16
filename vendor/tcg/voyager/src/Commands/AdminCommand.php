@@ -112,7 +112,7 @@ class AdminCommand extends Command
      *
      * @param bool $create
      *
-     * @return \App\User
+     * @return \App\Model\User
      */
     protected function getUser($create = false)
     {

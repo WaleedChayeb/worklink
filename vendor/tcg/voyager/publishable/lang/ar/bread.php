@@ -33,7 +33,7 @@ return [
     'icon_hint2'             => 'معرفات أيقونات فوياجر',
     'model_class'            => 'اسم فئة النموذج Model Class',
     'model_name'             => 'اسم النموذج Model',
-    'model_name_ph'          => 'مثال. \App\User, إذا تركت فارغة ستستخدم اسم الجدول',
+    'model_name_ph'          => 'مثال. \App\Model\User, إذا تركت فارغة ستستخدم اسم الجدول',
     'order'                  => 'الترتيب',
     'order_column'           => 'حقل الترتيب',
     'order_column_ph'        => 'العمود حيث يتم تخزين الترتيب به',

@@ -17,7 +17,7 @@ use App\Observers\SubscriptionsObserver;
 use App\Observers\TransactionsObserver;
 use App\Observers\UsersObserver;
 use App\Observers\UserVerifyObserver;
-use App\User;
+use App\Model\User;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;

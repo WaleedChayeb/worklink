@@ -33,7 +33,7 @@ return [
     'icon_hint2'             => 'ពុម្ភអក្សរ Voyager',
     'model_class'            => 'ឈ្មោះ Model Class',
     'model_name'             => 'ឈ្មោះ Model',
-    'model_name_ph'          => 'ឧ. \App\User ប្រសិនបើទុកទទេនឹងព្យាយាមប្រើឈ្មោះតារាង',
+    'model_name_ph'          => 'ឧ. \App\Model\User ប្រសិនបើទុកទទេនឹងព្យាយាមប្រើឈ្មោះតារាង',
     'order'                  => 'លំដាប់',
     'order_column'           => 'លំដាប់ជួរឈរ',
     'order_column_ph'        => 'ជួរឈរដែលការបញ្ជាទិញត្រូវបានរក្សាទុក',

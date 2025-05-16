@@ -33,7 +33,7 @@ return [
     'icon_hint2'             => 'Voyager Font Class',
     'model_class'            => 'Tên Model Class',
     'model_name'             => 'Tên Model',
-    'model_name_ph'          => 'VD: \App\User, nếu để trống sẽ sử dụng tên của bảng',
+    'model_name_ph'          => 'VD: \App\Model\User, nếu để trống sẽ sử dụng tên của bảng',
     'order'                  => 'Sắp xếp',
     'order_column'           => 'Sắp xếp theo cột',
     'order_column_ph'        => 'Cột này sẽ được sử dụng để sắp xếp các dòng trong bảng',

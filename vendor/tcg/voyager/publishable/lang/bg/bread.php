@@ -33,7 +33,7 @@ return [
     'icon_hint2'             => 'Voyager Font Class',
     'model_class'            => 'Model Class Name',
     'model_name'             => 'Име на Model',
-    'model_name_ph'          => 'пример. \App\User, ако бъде оставено празно ще опитаме да използваме името на таблицата ',
+    'model_name_ph'          => 'пример. \App\Model\User, ако бъде оставено празно ще опитаме да използваме името на таблицата ',
     'order'                  => 'Подредба',
     'order_column'           => 'Колона за подреба',
     'order_column_ph'        => 'Колона където подредбата е запазена',

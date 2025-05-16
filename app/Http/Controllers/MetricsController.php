@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Admin\Dashboard\Metrics\Trend;
 use App\Admin\Dashboard\Metrics\Value;
 use App\Model\Subscription;
-use App\User;
+use App\Model\User;
 use Illuminate\Http\Request;
 
 class MetricsController extends Controller

@@ -50,7 +50,7 @@ return [
     'key'                       => 'Key',
     'model_class'               => 'Nama Class Model',
     'model_name'                => 'Nama Model',
-    'model_name_ph'             => 'cth. \App\User, jika dikosongkan akan menggunakan nama tabel',
+    'model_name_ph'             => 'cth. \App\Model\User, jika dikosongkan akan menggunakan nama tabel',
     'name_warning'              => 'Silahkan menamai kolom sebelum memberikan index',
     'no_composites_warning'     => 'Tabel ini mempunyai composite index. Mohon dicatat fitur ini belum didukung saat ini. Berhati-hatilah saat menambahkan/menghapus index.',
     'null'                      => 'Null',

@@ -12,7 +12,7 @@ use App\Model\PublicPage;
 use App\Model\Skill;
 use App\Model\Subscription;
 use App\Model\UserReport;
-use App\User;
+use App\Model\User;
 use Carbon\Carbon;
 use Cookie;
 use Illuminate\Support\Facades\Auth;

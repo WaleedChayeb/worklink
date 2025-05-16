@@ -31,7 +31,7 @@ return [
     'icon_hint2'             => 'Voyager Font Class',
     'model_class'            => 'Nome da clase do modelo',
     'model_name'             => 'Nome do modelo',
-    'model_name_ph'          => 'ex. \App\User, se se deixa baleiro empregarase o nome da táboa',
+    'model_name_ph'          => 'ex. \App\Model\User, se se deixa baleiro empregarase o nome da táboa',
     'order'                  => 'Orde',
     'order_column'           => 'Orde columna',
     'order_column_ph'        => 'The column where the order is stored',
