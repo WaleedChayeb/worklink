@@ -498,7 +498,8 @@ class JobsController extends Controller
                 'id' => (string) Str::uuid(),
                 'company_id' => $company->id,
                 'path' => $path,
-                'filename' => $file->getClientOriginalName(), // <-- Add this line
+                'filename' => $file->getClientOriginalName(),
+                'driver' => \App\Model\Attachment::PUBLIC_DRIVER,
             ]);
         }
 
