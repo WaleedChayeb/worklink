@@ -19,6 +19,7 @@ use App\User;
 Route::middleware('auth:sanctum')->get('/skills', [App\Http\Controllers\JobsController::class, 'getAllSkills']);
 Route::middleware('auth:sanctum')->get('/companies', [App\Http\Controllers\JobsController::class, 'getAllCompanies']);
 Route::middleware('auth:sanctum')->get('/jobtypes', [App\Http\Controllers\JobsController::class, 'getAllJobTypes']);
+Route::middleware('auth:sanctum')->get('/job-categories', [App\Http\Controllers\JobsController::class, 'getAllJobCategories']);
 
 Route::post('/login', function (Request $request) {
     $user = User::where('email', $request->email)->first();
