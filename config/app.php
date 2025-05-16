@@ -258,6 +258,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'IconsHelper' => App\Providers\IconsServiceProvider::class,
         'InstallerHelper' => App\Providers\InstallerServiceProvider::class,
         'AppEmails' => App\Providers\EmailsServiceProvider::class,
