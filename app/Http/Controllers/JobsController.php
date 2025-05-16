@@ -502,11 +502,12 @@ class JobsController extends Controller
                 'driver' => \App\Model\Attachment::PUBLIC_DRIVER,
                 'type' => 'image',
             ]);
+            $logoUrl = asset('storage/' . $attachment->path);
         }
         else {
               $company->save();
         } 
-        return response()->json(['success' => true, 'company' => $company], 201);
+        return response()->json(['success' => true, 'company' => $company, 'logo_url' => $logoUrl], 201);
     }
 
     public function getAllJobTypes()
