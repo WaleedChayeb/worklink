@@ -1,9 +1,9 @@
 @extends('layouts.generic')
 
 {{-- SEO, Schema & Share --}}
-@section('page_title', __('Blog'))
+@section('page_title', __('المناقصات'))
 @section('share_url', route('blog.get'))
-@section('share_title',  __('Blog') . ' - ' .getSetting('site.name'))
+@section('share_title',  __('المناقصات') . ' - ' .getSetting('site.name'))
 @section('share_description', getSetting('site.description'))
 @section('share_type', 'article')
 @section('share_img', GenericHelper::getOGMetaImage())
@@ -28,7 +28,7 @@
         <div class="header-gradient-wrapper  d-flex w-100">
 
             <div class="container py-5">
-                <h2>{{__("Blog")}}</h2>
+                <h2>المناقصات</h2>
                 <h6 class="p-0 m-0">{{__("Blog sub-header")}}</h6>
             </div>
         </div>
