@@ -23,7 +23,7 @@
 
                 @if(getSetting('site.display_blog_page'))
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('blog.get') }}">{{ __('Blog') }}</a>
+                        <a class="nav-link" href="{{ route('blog.get') }}">المناقصات</a>
                     </li>
                 @endif
 

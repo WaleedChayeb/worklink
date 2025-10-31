@@ -29,7 +29,7 @@
 
             <div class="container py-5">
                 <h2>المناقصات</h2>
-                <h6 class="p-0 m-0">{{__("Blog sub-header")}}</h6>
+                <h6 class="p-0 m-0">تصفح جميع المناقصات المتاحة هنا</h6>
             </div>
         </div>
     </div>
