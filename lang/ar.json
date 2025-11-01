@@ -590,7 +590,7 @@
         "by": "بواسطة",
         "Tags": "الوسوم",
         "to post your job listing": "لنشر إعلان وظيفتك",
-        "Like the listing? Give it a try.": "أعجبك الإعلان؟ جربه.",
+        "Like the listing? Give it a try.": "هل أنت مهتم في هذه الفرصة؟",
     
         "VAT Number": "رقم ضريبة القيمة المضافة",
     
@@ -601,5 +601,7 @@
         "Learn more about us": "عن المنصة ",
         "Header Title": "منصة الفرص للقطاع غير الربحي والمنظمات",
         "Header Sub Title": "منصة مبتكرة لدعم مسيرتك المهنية في عالم المنظمات",
-        "Blog": "المناقصات" 
+        "Blog": "المناقصات",
+        "Blog sub-header": "المناقصات sub-header"
+
 }

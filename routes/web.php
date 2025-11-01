@@ -211,8 +211,8 @@ Route::post('/report/content', ['uses' => 'GenericController@postReport', 'as'  
 
 Route::post('/markBannerAsSeen', ['uses' => 'GenericController@markBannerAsSeen', 'as' => 'banner.mark.seen']);
 
-Route::get('/blog', ['uses' => 'BlogController@index', 'as'   => 'blog.get']);
-Route::get('/blog/{slug}', ['uses' => 'BlogController@getBlogPost', 'as'   => 'blog.post.get']);
+Route::get('/tenders', ['uses' => 'BlogController@index', 'as'   => 'blog.get']);
+Route::get('/tenders/{slug}', ['uses' => 'BlogController@getBlogPost', 'as'   => 'blog.post.get']);
 
 Route::fallback(function () {
     abort(404);
