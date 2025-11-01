@@ -2,7 +2,8 @@
     <div class="card-body">
         <div class="image-container pl-0">
             <a href="{{ route('blog.post.get', [$post->slug]) }}">
-                <img alt="{{ $post->title }}" src="{{ GenericHelper::getStorageAssetLink($post->cover) }}" class="img-fluid"/>
+                <img alt="{{ $post->title }}" src="{{ GenericHelper::getStorageAssetLink($post->cover) }}"
+                    class="img-fluid" />
             </a>
         </div>
         <div class="">
@@ -14,8 +15,17 @@
                     {!! GenericHelper::getBlogArticleExcerpt($post->content, 200) !!}
                 </div>
             </div>
+            @php
+                $user = optional($post->user);
+                $userName = $user->name ?? '';
+                $userLink = $userName ? GenericHelper::getUserFirstCompanyLink($userName) : '#';
+            @endphp
             <p class="author mt-1">
-                {{__("by")}} <a href="{{GenericHelper::getUserFirstCompanyLink($post->user)}}"><b>{{$post->user->name}}</b></a>, {{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->diffForHumans() }}
+                {{ __("by") }}
+                <a href="{{ $userLink }}">
+                    <b>{{ $userName }}</b>
+                </a>,
+                {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}
             </p>
         </div>
     </div>

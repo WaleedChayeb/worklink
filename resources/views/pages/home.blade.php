@@ -101,4 +101,38 @@
             </div>
         </div>
     </div>
+
+    <!-- blogs -->
+    <div class="container my-2">
+        <h2>{{__("Blog")}}</h2>
+        <div class="row no-gutters">
+            @if($articles->count() > 0)
+                @foreach($articles as $article)
+                    @include('pages.blog.box-article',['post' => $article])
+                @endforeach
+            @endif
+            @if($articles->count() === 0 && !isset($latestPost))
+                <div class="col-12">
+                    <div class="d-flex justify-content-center">
+                        <div class="row w-75 min-vh-65">
+                            <div class="col-auto d-flex align-items-center">
+                                <img src="{{asset('/img/no-jobs-found.svg')}}" class="image-250">
+                            </div>
+                            <div class="col d-flex align-items-center pl-5">
+                                <div class="">
+                                    <div>
+                                        <h4>{{__('No blog posts available yet.')}}</h4>
+                                        <p>{{__('Our team is diligently crafting new content for you. Check back soon for updates!')}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endif
+        </div>
+        <div class="d-flex flex-row-reverse mt-1 ">
+            {{ $articles->links() }}
+        </div>
+    </div>
 @stop

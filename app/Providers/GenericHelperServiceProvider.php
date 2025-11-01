@@ -280,13 +280,29 @@ class GenericHelperServiceProvider extends ServiceProvider
         return Purifier::clean($content);
     }
 
-    public static function getUserFirstCompanyLink($user) {
+   public static function getUserFirstCompanyLink($user)
+{
+    try {
+        // Check if $user is a valid object
+        if (!$user || !method_exists($user, 'companies')) {
+            return '#';
+        }
+
+        // Safely get the first related company
         $company = $user->companies()->first();
-        if($company){
+
+        // Ensure company and slug exist
+        if ($company && !empty($company->slug)) {
             return route('company.get', ['slug' => $company->slug]);
         }
-        return '#';
+
+    } catch (\Throwable $e) {
     }
+
+    // Default fallback
+    return '#';
+}
+
 
     public static function getLatestGlobalMessage() {
         if (!Schema::hasTable('global_announcements')) {
